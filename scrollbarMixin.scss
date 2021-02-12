@@ -1,0 +1,38 @@
+@mixin item-scrollbar($thumb-color, $background-color: mix($thumb-color, white,  50%), $width: 1rem) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $thumb-color;
+    scrollbar-arrow-color: $thumb-color;
+    scrollbar-track-color: $background-color;
+  }
+
+  // For Firefox
+  // This does not work for now use html-firefox-scrollbar
+  & {
+    scrollbar-color: $thumb-color $background-color;
+    scrollbar-width: $width;
+  }
+}
+
+// For Firefox
+@mixin html-firefox-scrollbar($thumb-color, $background-color: mix($thumb-color, white,  50%), $firefox-width: this) {
+  // This must be used on html element to take effect
+  & {
+    scrollbar-color: $thumb-color $background-color;
+    scrollbar-width: $firefox-width;
+  }
+}
