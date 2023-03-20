@@ -9,6 +9,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+input, button, textarea, select {
+  font: inherit;
+}
+
 p {
   margin-top: var(--leading);
   margin-bottom: 0;
