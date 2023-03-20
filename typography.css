@@ -1,6 +1,6 @@
 :root {
   --base-font-size: 16px;
-  --base-line-height: 1.5; // should never be below 1.5 per https://www.w3.org/TR/WCAG21/#text-spacing
+  --base-line-height: 1.5; /* should never be below 1.5 per https://www.w3.org/TR/WCAG21/#text-spacing */
   --scale: 1.5;
   --leading: calc(var(--base-line-height) * 1rem);
 
