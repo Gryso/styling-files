@@ -7,3 +7,8 @@ html {
   color: var(--main-font-color);
   background-color: var(--main-background-color);
 }
+
+/* allow SVG icon color to be overriten by CSS, remove this if you need to keep colors from SVG definition */
+svg {
+  fill: currentColor;
+}
